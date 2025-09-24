@@ -1,0 +1,35 @@
+blank_issues_enabled: false  # disables "open a blank issue" button
+
+issue_templates:
+  - name: 🐛 Bug Report
+    description: Report a reproducible bug or problem in the project
+    labels: ["bug"]
+    assignees: []
+
+  - name: ✨ Feature Request
+    description: Suggest a new feature or enhancement
+    labels: ["enhancement"]
+    assignees: []
+
+  - name: 📚 Documentation Update
+    description: Request updates or improvements to the documentation
+    labels: ["documentation"]
+    assignees: []
+
+  - name: 💡 Feedback
+    description: Share feedback or ideas that don’t fit the other categories
+    labels: ["feedback"]
+    assignees: []
+
+contact_links:
+  - name: 📖 Documentation
+    url: https://github.com/yourusername/pemf-audio-generator#-documentation
+    about: Please check the documentation first before opening an issue.
+
+  - name: 💬 Discussions
+    url: https://github.com/yourusername/pemf-audio-generator/discussions
+    about: For general questions, ideas, or community discussion, use GitHub Discussions.
+
+  - name: 🔒 Security Reports
+    url: https://github.com/yourusername/pemf-audio-generator/security/policy
+    about: Please report security or safety concerns responsibly via the Security Policy.

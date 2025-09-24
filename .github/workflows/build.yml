@@ -1,0 +1,95 @@
+name: Build PEMF Tracks
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: pemf-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  build-linux:
+    name: Linux • Makefile
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install system deps (libsndfile for soundfile)
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libsndfile1
+
+      - name: Cache pip
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('requirements.txt') }}-${{ hashFiles('pyproject.toml', 'setup.cfg', 'setup.py') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+
+      - name: Make install (venv + editable package + requirements)
+        run: make install
+
+      - name: Build all categories (sine)
+        run: make build
+
+      - name: Upload tracks artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: pemf-tracks-linux
+          path: tracks/**
+          if-no-files-found: warn
+          retention-days: 7
+
+  # Optional: Windows job using the npm-style scripts (handy for Windows users)
+  build-windows:
+    name: Windows • npm scripts
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Set up Node (for npm run scripts)
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Cache pip
+        uses: actions/cache@v4
+        with:
+          path: ~\AppData\Local\pip\Cache
+          key: ${{ runner.os }}-pip-${{ hashFiles('requirements.txt') }}-${{ hashFiles('pyproject.toml', 'setup.cfg', 'setup.py') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+
+      - name: npm run setup (create venv, install -e ., deps)
+        run: npm run setup
+        shell: bash
+
+      - name: npm run build (all categories)
+        run: npm run build
+        shell: bash
+
+      - name: Upload tracks artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: pemf-tracks-windows
+          path: tracks/**
+          if-no-files-found: warn
+          retention-days: 7

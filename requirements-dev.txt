@@ -1,0 +1,12 @@
+# Development dependencies for PEMF Audio Generator
+
+# Testing
+pytest
+
+# Linting & formatting
+ruff
+black
+
+# Packaging & building
+build
+twine
