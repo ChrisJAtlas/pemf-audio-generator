@@ -53,7 +53,7 @@ This Code of Conduct applies within:
 If you experience or witness unacceptable behavior:
 - Open a private GitHub Security Advisory, or  
 - Contact the maintainers directly at:  
-  📧 **[add your email here]**  
+  📧 christopheratlasdev@gmail.com
 
 All reports will be handled confidentially and respectfully.
 

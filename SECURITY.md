@@ -47,7 +47,7 @@ At this stage, the project is in early development.
 Please use GitHub **Security Advisories** or Issues with the label `safety` to report concerns.  
 For private disclosures, contact the repository maintainer at:
 
-📧 **[add your email here]**
+📧 christopheratlasdev@gmail.com
 
 ---
 
