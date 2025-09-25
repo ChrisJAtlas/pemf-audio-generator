@@ -1,0 +1,18 @@
+# Retry to reduce flakiness
+max_retries = 2
+retry_wait_time = 2
+timeout = 20
+
+# Treat 429 as ok (rate-limited) so docs don't go red for external sites
+accept = [200, 206, 429]
+
+# Don’t fail on missing anchors in GitHub-rendered docs
+exclude_path = ["**/node_modules/**", "**/vendor/**"]
+exclude = [
+  "mailto:*"
+]
+
+# Ignore these domains if they’re flaky for you. Add/remove as needed.
+# exclude = ["https://example.com"]
+
+# Cache results in CI (action handles caching between runs automatically)
