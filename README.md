@@ -1,14 +1,29 @@
 # PEMF Audio Generator
-
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 [![Discussions](https://img.shields.io/badge/GitHub-Discussions-blue.svg)](../../discussions)
+[![Docs](https://img.shields.io/badge/Docs-FAQ-informational)](FAQ.md)  
+[![Roadmap](https://img.shields.io/badge/Roadmap-Milestones-blue)](../../milestones)
+[![Labels](https://img.shields.io/badge/Issues-Labels-green)](../../labels)
 [![Security Policy](https://img.shields.io/badge/Security-Policy-red.svg)](SECURITY.md)
-[![Research Only](https://img.shields.io/badge/Use-Research--Only-orange.svg)](README.md#⚠️-disclaimer)
+[![Research Only](https://img.shields.io/badge/Use-Research--Only-orange.svg)](#-disclaimer)
 [![Safety First](https://img.shields.io/badge/Safety-First-lightgrey.svg)](SECURITY.md)
 
-Open-source Python scripts for generating **PEMF (Pulsed Electromagnetic Field) audio files** in WAV/FLAC format.  
-These audio files can be played through an amplifier and coil (such as a Rodin coil) to produce pulsed electromagnetic fields at specific frequencies.
+The **PEMF Audio Generator** is an open-source toolkit for generating **PEMF (Pulsed Electromagnetic Field) audio files** in WAV/FLAC format.  
+These audio files can be played through an amplifier and coil (such as a Rodin coil) to produce pulsed electromagnetic fields at specific frequencies.  
+This project emphasizes **research-backed frequency sets, rigorous validation, and clear documentation**, ensuring the audio produced is accurate and credible for research use.
+
+---
+
+## ⚠️ Disclaimer
+
+This repository is provided **for research, experimentation, and educational purposes only**.
+
+- The authors and contributors **assume no liability** for use or misuse of these scripts or audio files.  
+- While some frequencies are supported by peer-reviewed research, this does **not imply that every frequency is safe or beneficial**.  
+- Anyone experimenting with PEMF audio output does so **entirely at their own risk**.  
+
+Although playback via consumer audio chains is technically possible, **dedicated frequency generators and certified PEMF devices are safer**, as they typically include hazard controls and regulatory oversight.
 
 ---
 
@@ -17,15 +32,14 @@ These audio files can be played through an amplifier and coil (such as a Rodin c
 ### A Brief Note on PEMF
 Pulsed Electromagnetic Field (PEMF) technology has been studied for decades in contexts like bone healing, pain management, and neurological research.  
 
-In recent years, **PEMF coils** — including the well-known Rodin coil design — have become more accessible to the public. While this opens opportunities for exploration, it also raises safety considerations.  
+In recent years, **PEMF coils** — including the Rodin coil design — have become more accessible to the public. This opens new opportunities for exploration but also raises important safety considerations.  
 
-This project provides open-source scripts to generate **PEMF-ready audio files** for **research and educational purposes only**.  
-While you *can* play these through consumer audio chains and coils, **dedicated frequency generators and certified PEMF devices remain objectively safer**, as they typically include hazard controls and regulatory oversight.
+This project provides open-source scripts to generate **PEMF-ready audio files** for **research and educational purposes only**.
 
 ---
 
 ### Categories of Frequencies
-Over time, numerous categories of EMF frequencies have been proposed or studied. These include:
+Over time, numerous categories of EMF frequencies have been proposed or studied:
 
 - **Brainwave bands** (Delta, Theta, Alpha, Beta, Gamma)  
 - **Schumann resonances**  
@@ -34,19 +48,8 @@ Over time, numerous categories of EMF frequencies have been proposed or studied.
 
 👉 See [CATEGORIES.md](CATEGORIES.md) for a detailed breakdown of each, including origins and reliability levels.
 
-⚠️ Not all coils or playback systems can naturally reproduce every frequency.  
-Amplitude-modulated audio is sometimes required, and the provided scripts support this.
-
----
-
-### ⚠️ Disclaimer
-This repository is provided **for research, experimentation, and educational purposes only**.
-
-- The authors and contributors **assume no liability** for the use or misuse of these scripts or the audio files they generate.  
-- While certain frequencies are supported by peer-reviewed research, this does **not imply that every frequency is safe, nor that all included ranges are beneficial**.  
-- Anyone experimenting with PEMF audio output does so **entirely at their own risk**.  
-
-If you choose to explore this emerging technology, do so responsibly and with proper safety precautions.
+⚠️ Not all coils or playback systems can reproduce every frequency.  
+Amplitude-modulated audio may be required — the provided scripts support this.
 
 ---
 
@@ -59,7 +62,6 @@ cd pemf-audio-generator
 ```
 
 ### 2. Install dependencies
-Create a virtual environment and install dependencies:
 ```bash
 python -m venv .venv
 source .venv/bin/activate   # Windows: .venv\Scripts\activate
@@ -83,6 +85,9 @@ See [USAGE.md](USAGE.md) for detailed instructions on metadata, amplitude modula
 
 ## 📂 Documentation
 
+- [Project Statement](PROJECT_STATEMENT.md)  
+- [Vision & Roadmap](VISION_AND_ROADMAP.md)  
+- [FAQ](FAQ.md)  
 - [HISTORY.md](HISTORY.md) — Background on PEMF development  
 - [CATEGORIES.md](CATEGORIES.md) — Frequency categories explained (scientific vs esoteric)  
 - [REFERENCES.md](REFERENCES.md) — Research papers and sources  
@@ -97,22 +102,16 @@ See [USAGE.md](USAGE.md) for detailed instructions on metadata, amplitude modula
 ## 🗺 Roadmap
 
 This project follows a **documentation-first, code-second** approach.  
-The current focus is on implementing a baseline **Theta frequency generator**, with expansion into other categories via CSV libraries.
+The current focus is implementing a baseline **Theta frequency generator**, with expansion into other categories via CSV libraries.
 
-- 📍 See the pinned issue for the full development plan:  
-  [Roadmap: PEMF Audio Generator Development](../../issues/1)
-
-- 🗂 Track progress on the GitHub Projects board:  
-  [PEMF Audio Generator Project Board](../../projects)
-
-- 📖 Read more about how roadmap + project board work together:  
-  [PROJECTS.md](PROJECTS.md)
+- 📍 See the pinned [Roadmap Issue](../../issues/1) for milestones.  
+- 🗂 Track progress in [Projects](../../projects).  
+- 📖 Read more about how roadmap + project board work together: [PROJECTS.md](PROJECTS.md)
 
 ---
 
 ## 💬 Getting Feedback
 
-This project is still in its early stages, with a strong focus on **documentation and planning before code**.  
 We welcome feedback on:
 
 - Clarity of documentation (README, HISTORY, USAGE, etc.)  
@@ -121,11 +120,9 @@ We welcome feedback on:
 - Ideas for features or improvements in the generator scripts  
 
 👉 You can give feedback by:
-- Opening an **Issue** (questions, suggestions, or clarifications)  
-- Starting a **Discussion** (general thoughts, experience with PEMF, or related projects)  
-- Commenting on the **Roadmap Issue** to help shape priorities  
-
-⚠️ Note: This project is for **research and educational purposes only**. Feedback on documentation, usability, and transparency is especially welcome at this stage.
+- Opening an **Issue**  
+- Starting a **Discussion**  
+- Commenting on the **Roadmap Issue**  
 
 ---
 
@@ -143,5 +140,9 @@ This project is licensed under the [MIT License](LICENSE).
 ---
 
 ## 🔒 Security
-
 If you discover a vulnerability or have safety concerns, please see [SECURITY.md](SECURITY.md) for responsible disclosure guidelines.
+
+---
+
+## 🤝 Contributing
+Contributions are welcome! Please see [CONTRIBUTING.md](CONTRIBUTING.md) and [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) for details on how to get involved.
