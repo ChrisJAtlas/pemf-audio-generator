@@ -17,6 +17,29 @@ This project emphasizes **research-backed frequency sets, rigorous validation, a
 
 ---
 
+---
+
+> ⚠️ **Security Notice – Malicious Fork Alert**
+>
+> A **malicious fork** of this project has uploaded a fake binary file (`pemf-audio-generator.zip`)
+> containing executables (**`luajit.exe`**, **`lua51.dll`**, **`Application.cmd`**) that are detected by
+> multiple antivirus engines as **Trojans**.
+>
+> 🔴 **Do NOT download or run any ZIPs or EXEs from forks or third-party sources.**
+>
+> ✅ The only legitimate and safe version of **PEMF Audio Generator** is distributed **from this repository’s official Releases page:**
+> [https://github.com/Chris-Atlas/pemf-audio-generator/releases](https://github.com/Chris-Atlas/pemf-audio-generator/releases)
+>
+> - All authentic builds are open-source and built from the published code.  
+> - Official releases will always have matching **signed tags** and **SHA-256 checksums**.  
+> - We never distribute `.exe` installers or closed binaries outside of this repo.
+>
+> If you’ve downloaded files claiming to be this application from any other repository,
+> **delete them immediately** and perform a full antivirus scan.
+
+---
+
+
 ## 📖 Project Overview
 
 ### A Brief Note on PEMF
